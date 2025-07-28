@@ -1,0 +1,166 @@
+### Register User API
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "anin",
+  "password": "anin123",
+  "name": "anindya",
+  "email": "anin@example.com"
+}
+
+### Login User API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "anin",
+  "password": "anin123"
+}
+
+### Get User Profile API
+GET http://localhost:8000/api/users/current
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+### Update User Profile API
+PATCH  http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "name": "Anindya Najma",
+  "email": "anin@example.com"
+}
+
+### Logout User API
+DELETE  http://localhost:8000/api/users/logout
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "first_name" : "Labib",
+  "last_name": "Ihsan",
+  "email": "labib@example.com",
+  "phone": "12345321"
+}
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "first_name" : "Dina",
+  "last_name": "Marina",
+  "email": "dina@example.com",
+  "phone": "111111"
+}
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "first_name" : "Siva",
+  "last_name": "Nia",
+  "email": "siva@example.com",
+  "phone": "222222"
+}
+
+### Get Contacts API ID 1
+GET http://localhost:8000/api/contacts/
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+
+### Update Contact API ID 1
+PUT http://localhost:8000/api/contacts/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "first_name" : "Labib",
+  "last_name": "Hasan",
+  "email": "labib@example.com",
+  "phone": "12345321"
+}
+
+### Delete Contact API ID 1
+DELETE http://localhost:8000/api/contacts/1
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+
+### Search Contacts API
+GET http://localhost:8000/api/contacts?email=labib
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+### Create Address API ID 2
+POST http://localhost:8000/api/contacts/2/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "street": "123 Main St",
+  "city": "Anytown",
+  "provice": "CA",
+  "postal_code": "12345",
+  "country": "USA"
+}
+
+### Create Address API ID 4
+POST http://localhost:8000/api/contacts/2/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+    "street": "456 Elm St",
+    "city": "Othertown",
+    "province": "NY",
+    "postal_codep": "67890",
+    "country": "USA"
+}
+
+### Update Address API ID 2
+PUT http://localhost:8000/api/contacts/2/addresses/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+{
+  "street": "789 Oak St",
+  "city": "New City",
+  "province": "TX",
+  "postal_code": "54321",
+  "country": "USA"
+}
+
+### Delete Address API ID 2
+DELETE http://localhost:8000/api/contacts/2/addresses/1
+Accept: application/json
+content-Type: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
+
+### list Address API
+GET http://localhost:8000/api/contacts/2/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 0b81a876-c802-4fdf-98fb-2349934f42df
